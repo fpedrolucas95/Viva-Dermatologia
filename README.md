@@ -36,7 +36,7 @@
     <li>[x] Seleção do número de parcelas</li>
     <li>[x] Cálculo do valor das parcelas</li>
     <li>[x] Exibição do valor das parcelas</li>
-    <li>[ ] Opção para imprimir o formulário preenchido</li>
+    <li>[x] Opção para imprimir o formulário preenchido</li>
     <li>[ ] Opção para seleção de mais de um procedimento (procedimento X ou Y)</li>
     <li>[ ] Inclusão de um banco de dados para armazenar os procedimentos e valores</li>
     <li>[ ] Opção para salvar o orçamento no banco de dados para consulta posterior</li>
