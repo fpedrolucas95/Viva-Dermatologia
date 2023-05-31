@@ -1,80 +1,115 @@
+/* Resetar as propriedades globais de CSS e definir propriedades padrão */
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 13px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif; /* Utilizando uma fonte sans-serif mais moderna */
+  font-size: 16px; /* Aumentando a base do tamanho da fonte para melhor legibilidade */
 }
 
+/* Definindo o estilo para o corpo do documento */
 body {
-  background-color: #eef9ff;
+  background-color: #f8f9fa; /* Utilizando uma cor de fundo mais suave para melhor conforto visual */
 }
 
-/* Estilo para as seções */
+.logo {
+  position: absolute;
+  width: 128px;
+  margin-left: 30px;
+  margin-top: -10px;
+}
+
+/* Estilizando as seções */
 section {
-  background-color: rgb(243, 243, 243);
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 790px;
-  margin: 30px auto;
-  padding: 20px;
-  margin-bottom: 10px;
+  max-width: 800px; /* Aumentando a largura máxima para melhor uso do espaço em telas widescreen modernas */
+  margin: 30px auto; /* Aumentando as margens para dar mais espaço aos elementos */
+  padding: 30px; /* Aumentando o padding pelo mesmo motivo */
+  background-color: #ffffff; /* Utilizando um fundo branco para seções de conteúdo para contraste */
+  border-radius: 15px; /* Aumentando o border-radius para corresponder às tendências modernas */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Utilizando um box-shadow mais suave para um efeito 3D mais sutil */
 }
 
-/* Estilo para os campos nome e procedimento */
-#nome,
-#procedimento {
+#help {
+  position: relative;
+}
+
+.fa-question-circle {
+  position: absolute;
+  left: 720px;
+  top: -5px;
+}
+
+/* Estilo para os campos 'nome' e 'procedimento' */
+#nome {
   display: block;
-  width: 750px;
-  height: 28px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  width: 100%; /* Tornando o campo de entrada responsivo */
+  padding: 10px; /* Adicionando padding para melhor experiência do usuário */
+  margin-bottom: 20px; /* Aumentando a margem inferior para melhor espaçamento */
+  border-radius: 5px; /* Mantendo as bordas arredondadas */
+  border: 1px solid #ccc; /* Adicionando uma cor de borda para melhor visibilidade da entrada */
 }
 
-/* Estilo para o container dos campos valor e quantidade */
+/* Estilo para o container dos campos 'valor' e 'quantidade' */
 .valor-quantidade-container {
   display: flex;
   justify-content: space-between;
 }
 
-/* Estilo para os campos valor e quantidade */
-#valor,
-#quantidade {
-  width: 360px;
-  border-radius: 5px;
-  height: 28px;
+#procedimento {
+  display: block;
+  width: 490px; /* Definindo a largura específica para o campo de procedimento */
+  padding: 10px;
   margin-bottom: 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* Estilo para os botões */
+/* Estilo para os campos 'valor' e 'quantidade' */
+#valor,
+#quantidade {
+  width: 96px; /* Ligeiramente menos de 50% para permitir espaço entre os campos */
+  padding: 10px; /* Adicionando padding para melhor experiência do usuário */
+  border-radius: 5px; /* Mantendo as bordas arredondadas */
+  border: 1px solid #ccc; /* Adicionando uma cor de borda para melhor visibilidade da entrada */
+  margin-bottom: 20px; /* Mantendo o espaçamento consistente */
+}
+
+/* Estilo para botões */
 input[type="button"] {
-  display: inline-block;
-  padding: 10px;
+  padding: 10px 20px; /* Aumentando o padding horizontal para uma área de clique maior */
   margin-right: 10px;
   color: white;
+  background-color: #007bff; /* Usando a cor azul do bootstrap por padrão */
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Adicionando transição para uma mudança de cor suave ao passar o mouse */
+}
+
+/* Estilo de hover para botões */
+input[type="button"]:hover {
+  background-color: #0056b3; /* Escurecendo a cor do botão ao passar o mouse para melhor interatividade */
 }
 
 /* Cores específicas para cada botão */
 input[value="Imprimir"] {
-  background-color: blue;
+  background-color: #17a2b8; /* Usando a cor 'info' do Bootstrap */
 }
 
 input[value="Limpar"] {
-  background-color: gray;
+  background-color: #6c757d; /* Usando a cor 'secondary' do Bootstrap */
 }
 
 input[value="Adicionar"] {
-  background-color: green;
+  background-color: #28a745; /* Usando a cor 'success' do Bootstrap */
 }
 
-/* Estilize o h6 */
+/* Estilizando o h6 */
 h6 {
-  font-size: 8px;
+  font-size: 12px; /* Aumentando o tamanho da fonte para melhor legibilidade */
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px; /* Aumentando a margem superior para melhor espaçamento */
+  color: #6c757d; /* Usando uma cor mais suave para texto menos importante */
 }
