@@ -1,0 +1,80 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eef9ff;
+}
+
+/* Estilo para as seções */
+section {
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 790px;
+  margin: 30px auto;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para os campos nome e procedimento */
+#nome,
+#procedimento {
+  display: block;
+  width: 750px;
+  height: 28px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Estilo para o container dos campos valor e quantidade */
+.valor-quantidade-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilo para os campos valor e quantidade */
+#valor,
+#quantidade {
+  width: 360px;
+  border-radius: 5px;
+  height: 28px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os botões */
+input[type="button"] {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cores específicas para cada botão */
+input[value="Imprimir"] {
+  background-color: blue;
+}
+
+input[value="Limpar"] {
+  background-color: gray;
+}
+
+input[value="Adicionar"] {
+  background-color: green;
+}
+
+/* Estilize o h6 */
+h6 {
+  font-size: 8px;
+  text-align: center;
+  margin-top: 30px;
+}

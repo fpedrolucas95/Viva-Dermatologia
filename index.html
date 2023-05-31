@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Viva! Dermatologia</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!-- Primeira seção com campos para input dos usuários -->
+    <section id="principal">
+        <form>
+            </div>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br>
+
+            <label for="procedimento">Procedimento:</label><br>
+            <input type="text" id="procedimento" name="procedimento"><br>
+
+            <div class="valor-quantidade-container">
+                <div>
+                    <label for="valor">Valor:</label><br>
+                    <input type="number" id="valor" name="valor"><br>
+                </div>
+
+                <div>
+                    <label for="quantidade">Quantidade:</label><br>
+                    <input type="number" id="quantidade" name="quantidade"><br>
+                </div>
+            </div>
+
+            <!-- Botões para imprimir, limpar e adicionar -->
+            <input type="button" id="imprimir" value="Imprimir">
+            <input type="button" id="limpar" value="Limpar">
+            <input type="button" id="adicionar" value="Adicionar">
+        </form>
+    </section>
+
+    <!-- Segunda seção com número de parcelas e div para mudança dinâmica -->
+    <section id="resultado">
+        <label for="parcelas">Número de parcelas:</label>
+        <select id="parcelas">
+        </select>
+
+        <!-- Div que mudará de acordo com as alterações -->
+        <div id="divDinamica"></div>
+            <h6>
+                Versão 0.90 - 31 de maio de 2023<br>&copy; 2023, Viva! Dermatologia. Todos os direitos
+                reservados.<br>Desenvolvido por Pedro Lucas França
+            </h6>
+    </section>
+</body>
+<script src="js/main.js"></script>
+
+</html>
