@@ -1,7 +1,10 @@
+// Declarando 'janelaDeImpressao' no escopo global para que possa ser acessada por outras funções
+let janelaDeImpressao;
+
 // Função para imprimir a divDinamica
 function imprimirDivDinamica() {
     let nome = document.getElementById("nome").value;
-    let conteudo = `<div style='display: flex; flex-direction: column; justify-content: space-between; height: 600px; padding-top: 266px; padding-bottom: px;'><div style='flex: 1; display: flex; flex-direction: column; justify-content: flex-start;'>`;
+    let conteudo = `<div style='display: flex; flex-direction: column; justify-content: space-between; height: 550px; padding-top: 266px; padding-right: 20px;'><div style='flex: 1; display: flex; flex-direction: column; justify-content: flex-start;'>`;
     conteudo += `<p style='font-size: 24px; font-weight: bold;'>${nome},</p>`;
     conteudo += "<p style='font-size: 16px;'>Plano de tratamento:</p></div><div style='flex: 1; display: flex; flex-direction: column; justify-content: center;'>";
     adicoes.forEach(function (adicao, index) {
@@ -12,7 +15,7 @@ function imprimirDivDinamica() {
     let numParcelas = parseInt(parcelas.value);
     let valorParcela = somaTotal / numParcelas;
     conteudo += `<div style="text-align: right;"><p>Valor Total: ${formatarComoMoeda(somaTotal)}</p><p>Ou em ${numParcelas}x de ${formatarComoMoeda(valorParcela)} no cartão de crédito, ou, R$ ${formatarComoMoeda(somaTotal)} para pagamento à vista.</p><p>Brasília, ${new Date().toLocaleDateString("pt-BR", {day: "2-digit", month: "long", year: "numeric",})}</p><p>Orçamento válido por 60 dias.</p></div></div></div>`;
-    let janelaDeImpressao = window.open("", "", "height=1280,width=793");
+    janelaDeImpressao = window.open("", "", "height=1280,width=793");
     janelaDeImpressao.document.write("<html><head><title>Imprimir</title>");
     janelaDeImpressao.document.write("</head><body >");
     janelaDeImpressao.document.write(conteudo);
@@ -21,12 +24,15 @@ function imprimirDivDinamica() {
     janelaDeImpressao.print();
 }
 
-// Evento de click para imprimir a divDinamica
+// Evento de clique para imprimir a divDinamica
 document.getElementById("imprimir").addEventListener("click", function () {
     imprimirDivDinamica();
 });
 
-// Evento de click para cancelar a impressão
+// Evento de clique para cancelar a impressão
 document.getElementById("cancelar").addEventListener("click", function () {
-    janelaDeImpressao.close();
+    // Verifica se a janela de impressão existe antes de tentar fechá-la
+    if (janelaDeImpressao) {
+        janelaDeImpressao.close();
+    }
 });
