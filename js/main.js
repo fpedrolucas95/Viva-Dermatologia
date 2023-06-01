@@ -162,7 +162,7 @@ let janelaDeImpressao;
 // Função para imprimir a divDinamica
 function imprimirDivDinamica() {
   let nome = document.getElementById("nome").value;
-  let conteudo = `<div style='display: flex; flex-direction: column; justify-content: space-between; height: 550px; padding-top: 266px; padding-right: 20px;'><div style='flex: 1; display: flex; flex-direction: column; justify-content: flex-start;'>`;
+  let conteudo = `<div style='display: flex; flex-direction: column; justify-content: space-between; height: 550px; padding-top: 266px; padding-left: 20px; padding-right: 20px;'><div style='flex: 1; display: flex; flex-direction: column; justify-content: flex-start;'>`;
   conteudo += `<p style='font-size: 24px; font-weight: bold;'>${nome},</p>`;
   conteudo +=
     "<p style='font-size: 16px;'>Plano de tratamento:</p></div><div style='flex: 1; display: flex; flex-direction: column; justify-content: center;'>";
