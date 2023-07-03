@@ -113,3 +113,90 @@ h6 {
   margin-top: 40px; /* Aumentando a margem superior para melhor espaçamento */
   color: #6c757d; /* Usando uma cor mais suave para texto menos importante */
 }
+
+.error {
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px red;
+}
+
+/* Personalizando a div do login */
+#divLogin {
+  /* A configuração original é mantida */
+  background: white;
+  padding: 2rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Adicionando posição absoluta e ajustando para centralizar */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Personalizando o cabeçalho h2 dentro de divLogin */
+#divLogin h2 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Personalizando a label dentro de divLogin */
+#divLogin label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* Personalizando os campos de entrada de texto e senha */
+#divLogin input[type="text"],
+#divLogin input[type="password"] {
+  outline: none;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 0.4rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #8e2de2, #4a00e0);
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(100% - 1px);
+  background-color: white;
+  transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+/* Personalizando os campos de entrada de texto e senha quando em foco */
+#divLogin input[type="text"]:focus,
+#divLogin input[type="password"]:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: none;
+}
+
+/* Personalizando o botão de envio e tornando-o mais moderno */
+#divLogin input[type="submit"] {
+  /* Mantendo as configurações originais */
+  margin-top: 2rem;
+  padding: 0.4rem;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+
+  /* Adicionando uma nova cor de fundo com gradiente */
+  background: linear-gradient(to right, #8e54e9, #4776e6);
+  /* Aumentando o raio da borda para torná-lo mais moderno */
+  border-radius: 20px;
+}
+
+/* Personalizando o botão de envio quando o mouse está sobre ele */
+#divLogin input[type="submit"]:hover {
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #4776e6, #8e54e9);
+}
