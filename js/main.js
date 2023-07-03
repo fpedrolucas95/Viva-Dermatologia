@@ -2,6 +2,7 @@
 let adicoes = [];
 let somaTotal = 0;
 let valorMinimoParcela = 700;
+let userLogado = null; // Adicionado para guardar o nome do usuário logado
 
 // Função para formatar o valor como moeda
 function formatarComoMoeda(numero) {
@@ -144,10 +145,23 @@ function verificarPreenchimento() {
   let procedimento = document.getElementById("procedimento").value;
   let valor = parseFloat(document.getElementById("valor").value);
   let quantidade = parseInt(document.getElementById("quantidade").value);
-  let parcelas = document.getElementById("parcelas").value;
+  let parcelas = document.getElementById("parcelas");
+
+  // Remover classe de erro se já existir
+  parcelas.classList.remove("error");
 
   // Verifica se nenhum dos campos ou a opção de seleção está vazia
-  if (!nome.value || !procedimento || !valor || !quantidade || !parcelas) {
+  if (
+    !nome.value ||
+    !procedimento ||
+    !valor ||
+    !quantidade ||
+    !parcelas.value
+  ) {
+    if (!parcelas.value) {
+      // Se o número de parcelas não foi selecionado, adicione a classe de erro
+      parcelas.classList.add("error");
+    }
     alert(
       "Por favor, preencha todos os campos e selecione uma opção em parcelas"
     );
@@ -195,7 +209,7 @@ function imprimirDivDinamica() {
   )} para pagamento à vista.</p><p>Brasília, ${new Date().toLocaleDateString(
     "pt-BR",
     { day: "2-digit", month: "long", year: "numeric" }
-  )}</p><p>Orçamento válido por 60 dias.</p></div></div></div>`;
+  )}</p><p>Orçamento emitido por: ${userLogado} em ${new Date().toLocaleString()}</p><p>Orçamento válido por 60 dias.</p></div></div></div>`;
 
   janelaDeImpressao = window.open("", "", "height=1280,width=793");
   janelaDeImpressao.document.write("<html><head><title>Imprimir</title>");
