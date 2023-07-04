@@ -8,7 +8,7 @@ var users = {
         name: "Evangela Evangelista da Silva"
     },
     "alice": {
-        password: "senhaAlice",
+        password: "janaina27",
         name: "Alice de Jesus Gonçalves"
     },
     "mabya": {
