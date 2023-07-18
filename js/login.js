@@ -1,6 +1,6 @@
 var users = {
     "fabiana": {
-        password: "senhaFabiana",
+        password: "fabi1234",
         name: "Fabiana Carvalho Mendes"
     },
     "evangela": {
