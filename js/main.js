@@ -115,6 +115,12 @@ function atualizarParcelas() {
   let maxParcelas = 12;
   let valorParcela = somaTotal / numParcelas;
 
+  // Aqui estamos adicionando a condição
+  if(somaTotal < valorMinimoParcela) {
+    parcelas.innerHTML = '<option value="1">1 vez de ' + formatarComoMoeda(somaTotal) + '</option>';
+    return; // Encerra a função aqui.
+  }
+
   while (valorParcela < valorMinimoParcela && numParcelas > 1) {
     numParcelas--;
     valorParcela = somaTotal / numParcelas;
@@ -135,7 +141,6 @@ function atualizarParcelas() {
   }
 
   parcelas.value = numParcelas;
-
   let divDinamica = document.getElementById("divDinamica");
 }
 
